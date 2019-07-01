@@ -67,7 +67,7 @@ public class IntroActivity extends AppCompatActivity {
         // fill list screen
 
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Fresh Food","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur  consectetur adipiscing elit",R.drawable.img1));
+        mList.add(new ScreenItem("Fresh Flate","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur  consectetur adipiscing elit",R.drawable.img1));
         mList.add(new ScreenItem("Fast Delivery","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur  consectetur adipiscing elit",R.drawable.img2));
         mList.add(new ScreenItem("Easy Payment","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur  consectetur adipiscing elit",R.drawable.img3));
 
@@ -177,7 +177,7 @@ public class IntroActivity extends AppCompatActivity {
 
 
         SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
-        Boolean isIntroActivityOpnendBefore = pref.getBoolean("isIntroOpnend",false);
+        boolean isIntroActivityOpnendBefore = pref.getBoolean("isIntroOpnend",false);
         return  isIntroActivityOpnendBefore;
 
 
@@ -189,7 +189,7 @@ public class IntroActivity extends AppCompatActivity {
         SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.putBoolean("isIntroOpnend",true);
-        editor.commit();
+        editor.apply();
 
 
     }
