@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/ic_dashboard2_24dp"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/master"
+            android:icon="@drawable/ic_master_black_24dp"
+            android:title= "Master" />
+        <item
+            android:id="@+id/transaction"
+            android:icon="@drawable/ic_payment_black_24dp"
+            android:title="Transaction" />
+        <item
+            android:id="@+id/master_report"
+            android:icon="@drawable/ic_master_report_24dp"
+            android:title="Master Report" />
+        <item
+            android:id="@+id/transacation_report"
+            android:icon="@drawable/ic_payment_black_24dp"
+            android:title="Transaction Report" />
+        <item
+            android:id="@+id/user_access"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="User Access" />
+        <item
+            android:id="@+id/backup"
+            android:icon="@drawable/ic_backup_black_24dp"
+            android:title="Back Up" />
+        <item
+            android:id="@+id/exit"
+            android:icon="@drawable/ic_exit_to_app_black_24dp "
+            android:title="Exit" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="@string/menu_share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="@string/menu_send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>
