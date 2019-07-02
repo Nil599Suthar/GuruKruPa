@@ -1,4 +1,4 @@
-package com.example.gurukrupa;
+package com.example.gurukrupa.Api_Models;
 
 public class model {
     String title;

@@ -1,4 +1,4 @@
-package com.example.gurukrupa;
+package com.example.gurukrupa.Activity_Pkg;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,6 +13,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.gurukrupa.Adapters.IntroViewPagerAdapter;
+import com.example.gurukrupa.R;
+import com.example.gurukrupa.ScreenItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +48,7 @@ public class IntroActivity extends AppCompatActivity {
 
         if (restorePrefData()) {
 
-            Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class );
+            Intent mainActivity = new Intent(getApplicationContext(), SplashScreen.class );
             startActivity(mainActivity);
             finish();
 
@@ -147,7 +151,7 @@ public class IntroActivity extends AppCompatActivity {
 
                 //open main activity
 
-                Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class);
+                Intent mainActivity = new Intent(getApplicationContext(),SplashScreen.class);
                 startActivity(mainActivity);
                 // also we need to save a boolean value to storage so next time when the user run the app
                 // we could know that he is already checked the intro screen activity

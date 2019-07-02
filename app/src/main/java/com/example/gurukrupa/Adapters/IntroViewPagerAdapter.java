@@ -1,4 +1,4 @@
-package com.example.gurukrupa;
+package com.example.gurukrupa.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.gurukrupa.R;
+import com.example.gurukrupa.ScreenItem;
 
 import java.util.List;
 
