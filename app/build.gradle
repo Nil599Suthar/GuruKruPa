@@ -35,5 +35,5 @@ dependencies {
     implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     implementation 'com.j256.ormlite:ormlite-android:4.48'
-
+    implementation 'com.github.razerdp:AnimatedPieView:1.2.6'
 }

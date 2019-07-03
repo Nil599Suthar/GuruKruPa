@@ -8,150 +8,541 @@
     tools:context=".Activity_Pkg.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <LinearLayout
-        android:id="@+id/top_head"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/top_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:orientation="horizontal"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        >
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/top_list"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_list">
+
+
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
 
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/booked_flat"-->
-            <!--android:layout_width="200dp"-->
-            <!--android:layout_height="100dp"-->
-            <!--android:elevation="3dp">-->
+            <LinearLayout
+                android:id="@+id/top_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
 
-            <!--<TextView-->
+                >
+
+
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/booked_flat"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:elevation="3dp">-->
+
+                <!--<TextView-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
                 <!--android:text="Booked Flat"/>-->
-        <!--</android.support.v7.widget.CardView>-->
+                <!--</android.support.v7.widget.CardView>-->
 
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/booked_shop"-->
-            <!--android:layout_width="200dp"-->
-            <!--android:layout_height="100dp"-->
-            <!--android:elevation="3dp">-->
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/booked_shop"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:elevation="3dp">-->
 
-            <!--<TextView-->
+                <!--<TextView-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
                 <!--android:text="Booked Shop"/>-->
-        <!--</android.support.v7.widget.CardView>-->
+                <!--</android.support.v7.widget.CardView>-->
 
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/total_inquiry"-->
-            <!--android:layout_width="200dp"-->
-            <!--android:layout_height="100dp"-->
-            <!--android:elevation="3dp">-->
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/total_inquiry"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:elevation="3dp">-->
 
-            <!--<TextView-->
+                <!--<TextView-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
                 <!--android:text="Total Inquiry"/>-->
-        <!--</android.support.v7.widget.CardView>-->
+                <!--</android.support.v7.widget.CardView>-->
 
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/total_payment"-->
-            <!--android:layout_width="200dp"-->
-            <!--android:layout_height="100dp"-->
-            <!--android:elevation="3dp">-->
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/total_payment"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:elevation="3dp">-->
 
-            <!--<TextView-->
+                <!--<TextView-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
                 <!--android:text="Total Payment"/>-->
-        <!--</android.support.v7.widget.CardView>-->
+                <!--</android.support.v7.widget.CardView>-->
 
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/flat_data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_head">
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:elevation="3dp">
+            </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/flat_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="22dp"
-                android:text="Flat Booking Total Amount" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top_head">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:scrollbars="horizontal">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:elevation="3dp">
 
-                <TableRow>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                 <TextView
-                     android:layout_height="25dp"
-                     android:text="No. of Unit"
-                     android:padding="3dp"
-                     android:background="#e0e0e0"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Flat Booking Total Amount"
+                            android:textSize="22dp" />
 
-                <TextView
-                     android:layout_height="25dp"
-                     android:text="No. of Unit"
-                     android:padding="3dp"
-                     android:background="#e0e0e0"/>
-                <TextView
-                     android:layout_height="25dp"
-                     android:text="No. of Unit"
-                     android:padding="3dp"
-                     android:background="#e0e0e0"/>
-                <TextView
-                     android:layout_height="25dp"
-                     android:text="No. of Unit"
-                     android:padding="3dp"
-                     android:background="#e0e0e0"/>
-                <TextView
-                     android:layout_height="25dp"
-                     android:text="No. of Unit"
-                     android:padding="3dp"
-                     android:background="#e0e0e0"/>
-                <TextView
-                     android:layout_height="25dp"
-                     android:text="No. of Unit"
-                     android:padding="3dp"
-                     android:background="#e0e0e0"/>
-                </TableRow>
-                <TableRow>
-                <TextView
-                    android:padding="3dp"
-                     android:layout_height="25dp"
-                     android:text="value"
-                    />
-                </TableRow>
-            </TableLayout>
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:scrollbars="horizontal">
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_height="25dp"
+                                    android:background="#e0e0e0"
+                                    android:padding="3dp"
+                                    android:text="No. of Unit" />
+
+                                <TextView
+                                    android:layout_height="25dp"
+                                    android:background="#e0e0e0"
+                                    android:padding="3dp"
+                                    android:text="No. of Unit" />
+
+                                <TextView
+                                    android:layout_height="25dp"
+                                    android:background="#e0e0e0"
+                                    android:padding="3dp"
+                                    android:text="No. of Unit" />
+
+                                <TextView
+                                    android:layout_height="25dp"
+                                    android:background="#e0e0e0"
+                                    android:padding="3dp"
+                                    android:text="No. of Unit" />
+
+                                <TextView
+                                    android:layout_height="25dp"
+                                    android:background="#e0e0e0"
+                                    android:padding="3dp"
+                                    android:text="No. of Unit" />
+
+                                <TextView
+                                    android:layout_height="25dp"
+                                    android:background="#e0e0e0"
+                                    android:padding="3dp"
+                                    android:text="No. of Unit" />
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_height="25dp"
+                                    android:padding="3dp"
+                                    android:text="value" />
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="192dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/flat_data">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:id="@+id/flat_booking_chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Flat Booking Chart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/expand_view"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/ic_expand_more_black_24dp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/flat_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_margin="8dp"
+                                android:background="#BE000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Empty Flat"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_margin="8dp"
+                                android:background="#FF0000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Booked Flat"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <com.razerdp.widget.animatedpieview.AnimatedPieView
+                            android:id="@+id/animatedPieView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/show_empty_flat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Empty shop"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+
+
+                            <TextView
+                                android:id="@+id/show_book_flat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Booked shop"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:id="@+id/shop_booking_chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Shop Booking Chart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/hide_view"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/ic_expand_more_black_24dp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/shop_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_margin="8dp"
+                                android:background="#BE000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Empty Shop"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_margin="8dp"
+                                android:background="#FF0000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Booked Shop"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+
+                        <com.razerdp.widget.animatedpieview.AnimatedPieView
+                            android:id="@+id/animatedPieView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/show_empty_shop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Empty shop"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+
+
+                            <TextView
+                                android:id="@+id/show_book_shop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Booked shop"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Shop Booking Chart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="318dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Shop Booking Chart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="318dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Shop Booking Chart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="318dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Shop Booking Chart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="318dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Shop Booking Chart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="318dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Shop Booking Chart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="318dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Shop Booking Chart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="318dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Shop Booking Chart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="318dp" />
+
+
+            </LinearLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
 </android.support.constraint.ConstraintLayout>
