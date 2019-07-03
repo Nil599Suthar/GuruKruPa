@@ -66,34 +66,36 @@ public class MainActivity extends AppCompatActivity
         show_empty_flat = findViewById(R.id.show_empty_flat);
         show_empty_shop = findViewById(R.id.show_empty_shop);
 
-        expand_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CreateExpandView_FlateBookingChart();
-            }
-        });
-        flat_booking_chart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CreateExpandView_FlateBookingChart();
-            }
-        });
+//        expand_view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                CreateExpandView_FlateBookingChart();
+//            }
+//        });
+//        flat_booking_chart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                CreateExpandView_FlateBookingChart();
+//            }
+//        });
+//
+//
+//        hide_view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                CreateExpandView_ShopBookingChart();
+//            }
+//        });
+//        shop_booking_chart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                CreateExpandView_ShopBookingChart();
+//            }
+//        });
 
 
-        hide_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CreateExpandView_ShopBookingChart();
-            }
-        });
-        shop_booking_chart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CreateExpandView_ShopBookingChart();
-            }
-        });
-
-
+        GetFlatePieChart();
+        GetShopPieChart();
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -146,7 +148,7 @@ public class MainActivity extends AppCompatActivity
 
     private void GetFlatePieChart() {
 
-        int booked_flat = 15;
+        int booked_flat = 12;
         int total_flat= 60;
         int empty_flat = total_flat - booked_flat;
 
