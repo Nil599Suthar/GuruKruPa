@@ -6,8 +6,8 @@
     <color name="colorAccent">#FFFFFF</color>
 
 
-    <color name="gradient_start_color">#4c84ff</color>
-    <color name="gradient_end_color">#18a3fe</color>
+    <color name="gradient_start_color">#4FACDF</color>
+    <color name="gradient_end_color">#E21FC6D6</color>
 
 
     <!-- colors for tab and screent text -->

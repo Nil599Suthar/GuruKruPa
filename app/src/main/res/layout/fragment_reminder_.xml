@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Reminder_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:id="@+id/top_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/linearLayout3"
+                        android:elevation="3dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/stamp_payment_reminder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    android:text="Stamp Payment Reminder"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="20dp"/>
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:scrollbars="horizontal">
+
+                                    <TableRow
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_height="match_parent"
+                                        >
+
+                                        <TextView
+                                            android:layout_width="100dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:background="#e0e0e0"
+                                            android:padding="3dp"
+                                            android:text="Date"
+                                            android:textColor="@android:color/background_dark" />
+
+                                        <TextView
+                                            android:layout_width="262dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:layout_weight="2"
+                                            android:background="#e0e0e0"
+                                            android:padding="3dp"
+                                            android:text="Description"
+                                            android:textColor="@android:color/background_dark" />
+
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/stamp_reminder_list"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_span="5"/>
+
+                                    </TableRow>
+
+                                </TableLayout>
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/linearLayout4"
+                        android:elevation="3dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/remain_payment_reminder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    android:text="Remain Payment Reminder"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="20dp"/>
+
+
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:scrollbars="horizontal">
+
+                                    <TableRow
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_height="match_parent"
+                                        >
+
+                                        <TextView
+                                            android:layout_width="100dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:background="#e0e0e0"
+                                            android:padding="3dp"
+                                            android:text="Date"
+                                            android:textColor="@android:color/background_dark" />
+
+                                        <TextView
+                                            android:layout_width="262dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:layout_weight="2"
+                                            android:background="#e0e0e0"
+                                            android:padding="3dp"
+                                            android:text="Description"
+                                            android:textColor="@android:color/background_dark" />
+
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/remain_payment_reminder_list"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_span="5"/>
+
+                                    </TableRow>
+
+                                </TableLayout>
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/linearLayout5"
+                        android:elevation="3dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/other_payment_reminder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Other Payment Reminder"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="20dp"/>
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:scrollbars="horizontal">
+
+                                    <TableRow
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_height="match_parent"
+                                        >
+
+                                        <TextView
+                                            android:layout_width="100dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:background="#e0e0e0"
+                                            android:padding="3dp"
+                                            android:text="Date"
+                                            android:textColor="@android:color/background_dark" />
+
+                                        <TextView
+                                            android:layout_width="262dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:layout_weight="2"
+                                            android:background="#e0e0e0"
+                                            android:padding="3dp"
+                                            android:text="Description"
+                                            android:textColor="@android:color/background_dark" />
+
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/other_payment_reminder_list"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_span="5"/>
+
+                                    </TableRow>
+
+                                </TableLayout>
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/linearLayout6"
+                        android:elevation="3dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/happy_bday_wish"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Happy Birthday Wishes"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="20dp"/>
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:scrollbars="horizontal">
+
+                                    <TableRow
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_height="match_parent"
+                                        >
+
+                                        <TextView
+                                            android:layout_width="100dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:background="#e0e0e0"
+                                            android:padding="3dp"
+                                            android:text="Date"
+                                            android:textColor="@android:color/background_dark" />
+
+                                        <TextView
+                                            android:layout_width="262dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:layout_weight="2"
+                                            android:background="#e0e0e0"
+                                            android:padding="3dp"
+                                            android:text="Description"
+                                            android:textColor="@android:color/background_dark" />
+
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/birthday_wish_list"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_span="5"/>
+
+                                    </TableRow>
+
+                                </TableLayout>
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/linearLayout7"
+                        android:elevation="3dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/marriage_wish"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Marriage Anniversary Wishes"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="20dp"/>
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:scrollbars="horizontal">
+
+                                    <TableRow
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_height="match_parent"
+                                        >
+
+                                        <TextView
+                                            android:layout_width="100dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:background="#e0e0e0"
+                                            android:padding="3dp"
+                                            android:text="Date"
+                                            android:textColor="@android:color/background_dark" />
+
+                                        <TextView
+                                            android:layout_width="262dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginEnd="2dp"
+                                            android:layout_weight="2"
+                                            android:background="#e0e0e0"
+                                            android:padding="3dp"
+                                            android:text="Description"
+                                            android:textColor="@android:color/background_dark" />
+
+                                    </TableRow>
+
+                                    <TableRow>
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/marriage_wish_list"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_span="5"/>
+
+                                    </TableRow>
+
+                                </TableLayout>
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

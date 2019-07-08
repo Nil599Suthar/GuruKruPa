@@ -9,15 +9,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.gurukrupa.Api_Models.bookd;
 import com.example.gurukrupa.Api_Models.model;
 
 import java.util.List;
 
 public class toplist extends RecyclerView.Adapter<toplist.MyViewHolder> {
-    public List<model> offersList;
+    public List<bookd> offersList;
     Context context;
 
-    public toplist(List<model> offersList, Context context) {
+    public toplist(List<bookd> offersList, Context context) {
         this.offersList = offersList;
         this.context = context;
     }
@@ -32,8 +33,8 @@ public class toplist extends RecyclerView.Adapter<toplist.MyViewHolder> {
     @Override
     public void onBindViewHolder(MyViewHolder myViewHolder, int i) {
 
-        myViewHolder.filename.setText(offersList.get(i).getTitle());
-        myViewHolder.ammount.setText(offersList.get(i).getAmmount());
+        myViewHolder.filename.setText(offersList.get(i).getField());
+        myViewHolder.ammount.setText(offersList.get(i).getValue());
 
     }
 
@@ -58,7 +59,6 @@ public class toplist extends RecyclerView.Adapter<toplist.MyViewHolder> {
                 @Override
                 public void onClick(View v) {
 
-                    Toast.makeText(context, ""+filename.getText().toString(), Toast.LENGTH_SHORT).show();
                 }
             });
         }
